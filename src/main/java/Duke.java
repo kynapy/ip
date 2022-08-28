@@ -4,7 +4,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.BufferedWriter;
 
 public class Duke {
     public static void main(String[] args) throws Exception{
@@ -23,6 +22,7 @@ public class Duke {
         System.out.println(spacing + "\n");
 
         // File check and creation
+        new File("./data").mkdirs();
         File dataStore = new File("./data/duke.txt"); 
         if (dataStore.exists()) {
             BufferedReader fileRead = new BufferedReader(new FileReader(dataStore));
